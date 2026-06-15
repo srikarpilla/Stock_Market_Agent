@@ -80,7 +80,7 @@
     },
     {
       "parameters": {
-        "url": "=https://newsapi.org/v2/everything?q=(Apple+OR+Tesla+OR+Microsoft+OR+Google+OR+Meta+OR+Anthropic+OR+NVIDIA+OR+Amazon)+AND+(stock+OR+shares+OR+earnings+OR+market)&sortBy=publishedAt&pageSize=8&language=en&domains=reuters.com,bloomberg.com,cnbc.com,finance.yahoo.com,techcrunch.com,wsj.com&apiKey=4cce01fed084450b85b68f272de49379",
+        "url": "=https://newsapi.org/v2/everything?q=(Apple+OR+Tesla+OR+Microsoft+OR+Google+OR+Meta+OR+Anthropic+OR+NVIDIA+OR+Amazon)+AND+(stock+OR+shares+OR+earnings+OR+market)&sortBy=publishedAt&pageSize=8&language=en&domains=reuters.com,bloomberg.com,cnbc.com,finance.yahoo.com,techcrunch.com,wsj.com&apiKey=7reefurevhevbf7ur4r4r89fy34r",
         "options": {
           "timeout": 10000
         }
@@ -131,7 +131,7 @@
           "parameters": [
             {
               "name": "Authorization",
-              "value": "Bearer 7G0SW3WIlozJq4xEBSGLP8473NBo9eWsX48IO4N5"
+              "value": "Bearer YOUR_API_KEY"
             },
             {
               "name": "Content-Type",
@@ -172,8 +172,8 @@
     },
     {
       "parameters": {
-        "fromEmail": "pillasrikar12@gmail.com",
-        "toEmail": "srikarpilla2@gmail.com",
+        "fromEmail": "your@gmail.com",
+        "toEmail": "your@gmail.com",
         "subject": "={{ $json.subject }}",
         "html": "={{ $json.html }}",
         "options": {}
