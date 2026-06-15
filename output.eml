@@ -1,0 +1,366 @@
+Delivered-To: srikarpilla2@gmail.com
+Received: by 2002:a05:6a11:b806:b0:707:7e71:6fc9 with SMTP id md6csp1206749pxc;
+        Mon, 15 Jun 2026 08:46:03 -0700 (PDT)
+X-Received: by 2002:ac2:4f08:0:b0:5aa:6b19:b339 with SMTP id 2adb3069b0e04-5ad30d9c084mr3145478e87.7.1781538363063;
+        Mon, 15 Jun 2026 08:46:03 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1781538363; cv=none;
+        d=google.com; s=arc-20240605;
+        b=C1SjdN+zKf0ktCYLzn8LPXv0IFf+8MHH/RTMSyTExD0CkeZa9p1PmvDquiKE4xVj56
+         r4nMdGcB2vw3uKLNa+fJWLKZVzSaT9oT20pbuXlGiR1O1v7jwQsGDLTImXs2VOLEmhdu
+         Zxc+6FT5U2eZCWdJht7Wp6SibpWyBGuF5mpz7xQrOMZG1U+K7TGD+7iC2zLFcvxm2qtJ
+         8m2njMathZq2yNbkxloBC0XvSP7GoMN5rPJNIZGjTIleT0Kpv4geFdenPURt8MYHb+AR
+         pjFLqDAyiGGr4+3pXAmPXw9ZyqsgTBH3y2Oz1/crOGMYm+47Vg/v1JOfzGL125hXCv5g
+         9JXw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:date:content-transfer-encoding:message-id:subject:to
+         :from:dkim-signature;
+        bh=zQGQy9OjjLAxFcqnqzxeAlc3LeI6rWha7ESjiSYEYHo=;
+        fh=hS9fZ2K/92e1w5A4NbmsUQN5l+dfRaF74l+k3kNKJko=;
+        b=LErI9wK+CcO1pwHtn535N0wdaA+DNFG9DfvzZIDHmW0REplzdlewmM9j4mCpvNBIjH
+         I7EOzM7/WXgTBr0fb8ACXYvkqtaeKxd8dUpUwmz+NXsC7SRVxcfwYHznAPYm1o4GHrMu
+         JzUe08Ob2hqADOMYyaVOTJGbbDeT/WJOwqwdpY3FulbB/2NZkxI8vj4K3Y1ZUIvcLSE/
+         Rs9HuU5Mg4zf6O2bO5vSrOZdzlfX/eHgERYVLjEEzbNXWCjorCuBRJEiQNrzHj18S8k2
+         U6rOASP9dgbL5SJs0naNYqVg0i80ieTNTQ5gNGYrNyioE6HnT29DrjeAjq+MR/gtK5Nr
+         WaKg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=Un4jLh9l;
+       spf=pass (google.com: domain of pillasrikar12@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=pillasrikar12@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <pillasrikar12@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 2adb3069b0e04-5ad366f8d65sor711732e87.17.2026.06.15.08.46.02
+        for <srikarpilla2@gmail.com>
+        (Google Transport Security);
+        Mon, 15 Jun 2026 08:46:03 -0700 (PDT)
+Received-SPF: pass (google.com: domain of pillasrikar12@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=Un4jLh9l;
+       spf=pass (google.com: domain of pillasrikar12@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=pillasrikar12@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1781538362; x=1782143162; dara=google.com;
+        h=mime-version:date:content-transfer-encoding:message-id:subject:to
+         :from:from:to:cc:subject:date:message-id:reply-to;
+        bh=zQGQy9OjjLAxFcqnqzxeAlc3LeI6rWha7ESjiSYEYHo=;
+        b=Un4jLh9lI2r+MEHXzxuGscSIdR4c2LaoFBmUm6WpTVYbQQxwK1dGxq6RmAoPz9DsMk
+         4XgKruogW+me3LqsJGRPVe3AyRbuKfO6wE2Vy/ngZZAhaBOFzoEYXUrHQp6iZumLPh0G
+         IdWg9CsQvGAkmyzZ9l1nogumdey+yniVGbVlxhGeDhs8TQff49xJQ7lcPsCKPGGhhSKu
+         zaf08wtUyclZHZM0sIiIS6WNTnkzVqZ3PdDX0PVQP2EL93iiYik9IH7c85sXGikXVNtR
+         Xn1sG2MKGj7xktZ6hc7sTUuTrYbiITHNoQbLxvs1Fn1aSaBjpfJP8SmXsPlDQGGU/3OK
+         ftAQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1781538362; x=1782143162;
+        h=mime-version:date:content-transfer-encoding:message-id:subject:to
+         :from:x-gm-gg:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=zQGQy9OjjLAxFcqnqzxeAlc3LeI6rWha7ESjiSYEYHo=;
+        b=blsVSJsDxOW7oWdTPr8KaHFCMY/oItcLGaeMxalz+x6epwRC9/W1+Uz7R3NrseOcUs
+         CjNL269khtEILXk5tHx87Azsw22/TaYRest0dU0RxUonThASTXHYD58BuymeZxbqweBr
+         siOTduXuFGg6RsQ5XnYwnc4lsQrW7PZjao4LRn+B0RYvmtFAZTSK+9PRKF8xMNTncXX/
+         u33sB/WdtE7BdrMa3/lmWS10OoIpNOCADbOVh0QuVxXe4Gv4kZRlvrZdwhC+vPTAL12P
+         HJnUfcAljZ/E8Vsoz1AUfKsdQ1rYyjz059JZvD01RWMuzkiAv0rCZkmwOfd2OmxhGTvQ
+         owNQ==
+X-Gm-Message-State: AOJu0YztCG3rAdTEkjJqbV4IRFQGnWvRqVZoVC6j5ILJ9ljxQt0ImZr5
+	w7e5Iwi4x6imIxKXfAqkMzHDiGAmqJTTjWTcZK4qLZfCLEFPGqpm/rGfuwFqVRyn
+X-Gm-Gg: Acq92OEWpY7Yru4DLFQouzUx3fIQ0ey7yt0HnT6EW8G53UufJH/sE766ZO9bz0MUaVK
+	9Dzc3rA8YCaKaB0yXm3hFltPMaRURqyflMP+nGhcgd2E/qPPo+1npmBQaxA3kjJNN93mT+LJGtn
+	jf71Bl4mMoxbbngQOgyWeukWHnP298f5wdkX4kYqYiFMS3hwHwp2sRp/DcvRT1MJJK22bmEh6lk
+	k+OSSaKjQsmuN2l5FryMBfNpNdfL3EU63RyAhTOZlT2Tcm8q6nlVu+ZJtvx4sHGs/5R4qQJuTpr
+	GRxjr/AFc/ByiNpAMwSJxmzBwdJYXHgilkyJNrKZ0AtBuu28hL6td3UIOIm4jNTJ+udXI994ZuQ
+	vpk0iCm7jNrBSrB122Ea7BQC9sXbiSmblnbsXmXzxb6dWHWtx8BCvWhWc9sLe62N/L34EVQeChV
+	9qoFMVVc82lALJnkjKSGzv/G0s+WCsfhHepkeqvwPAAEPNpzWE25f5Mt7FhGvhtiLyzESJR+1vo
+	lIzT+/zzR0An3vSL4eTyfuXl6BZzfY=
+X-Received: by 2002:a05:6512:65cb:20b0:5aa:7105:4f9a with SMTP id 2adb3069b0e04-5ad30dc0c30mr2229084e87.25.1781538362064;
+        Mon, 15 Jun 2026 08:46:02 -0700 (PDT)
+Return-Path: <pillasrikar12@gmail.com>
+Received: from [127.0.0.1] ([51.107.180.120])
+        by smtp.gmail.com with ESMTPSA id 2adb3069b0e04-5ad2e161f1esm2936091e87.2.2026.06.15.08.46.01
+        for <srikarpilla2@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 15 Jun 2026 08:46:01 -0700 (PDT)
+From: pillasrikar12@gmail.com
+To: srikarpilla2@gmail.com
+Subject: Market Open -- Bullish | Best: AAPL | Worst: GOOGL -- Mon Jun 15
+ 2026
+Message-ID: <3dee87de-f268-9083-5cfe-7e14bd941113@gmail.com>
+Content-Transfer-Encoding: quoted-printable
+Date: Mon, 15 Jun 2026 15:46:01 +0000
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+
+					<div style=3D'background:#0a0a1a;font-family:Arial,=
+sans-serif;max-width:700px;margin:0 auto;border-radius:12px;overflow:hidden=
+;border:1px solid #1a1a3a;'>
+  <div style=3D'background:linear-gradient(135=
+deg,#0a0a1a,#0d1b2a);border-bottom:2px solid #00d4ff;padding:28px 32px;'>
+    <div style=3D'font-size:11px;color:#00d4ff;letter-spacing:3px;text-tran=
+sform:uppercase;margin-bottom:8px;'>AI STOCK MONITOR &middot; MON JUN 15 =
+2026</div>
+    <h1 style=3D'margin:0;font-size:26px;color:#fff;'>&#127749; =
+Good Morning &mdash; Market Open Report</h1>
+    <p style=3D'margin:8px 0 =
+0;color:#666;font-size:13px;'>Apple &middot; Meta &middot; Google &middot; =
+Microsoft &middot; Tesla &middot; NVIDIA &middot; Amazon + Anthropic =
+News</p>
+    <p style=3D'margin:4px 0 0;font-size:11px;color:#333;'>Powered=
+ by Cohere AI &middot; Financial Modeling Prep &middot; NewsAPI &middot; =
+n8n</p>
+  </div>
+  <div style=3D'padding:24px 32px;background:#0d0d20;'>
+   =20
+    <div style=3D'background:#00c85311;border:1px solid =
+#00c85344;border-radius:8px;padding:16px 20px;margin-bottom:24px;'>
+      <div style=3D'color:#00c853;font-size:12px;font-weight:700;letter-spa=
+cing:2px;text-transform:uppercase;margin-bottom:6px;'>Market Sentiment: =
+Bullish</div>
+      <p style=3D'color:#ccc;margin:0;font-size:14px;line-hei=
+ght:1.6;'>The market is showing signs of strength with a positive start to =
+the week. Tech giants led the charge, with Apple, Microsoft, and Tesla =
+posting gains. News of SpaceX's successful IPO and positive analyst =
+sentiments are driving investor confidence. However, some stocks like =
+Google and NVIDIA experienced minor setbacks.</p>
+    </div>
+    <h2 style=3D'color:#fff;font-size:16px;margin:0 0 =
+12px;border-bottom:1px solid #1a1a35;padding-bottom:8px;'>&#128200; Stock =
+Prices + AI Ratings</h2>
+    <table style=3D'width:100%;border-collapse:col=
+lapse;background:#111126;border-radius:8px;overflow:hidden;margin-bottom:24=
+px;'>
+      <thead><tr style=3D'background:#1a1a35;'>
+        <th style=3D'padding:10px 14px;text-align:left;color:#666;font-size=
+:11px;text-transform:uppercase;'>Ticker</th>
+        <th =
+style=3D'padding:10px 14px;text-align:left;color:#666;font-size:11px;text-t=
+ransform:uppercase;'>Company</th>
+        <th style=3D'padding:10px =
+14px;text-align:left;color:#666;font-size:11px;text-transform:uppercase;'>O=
+pen</th>
+        <th style=3D'padding:10px 14px;text-align:left;color:#666;=
+font-size:11px;text-transform:uppercase;'>Close</th>
+        <th style=3D'padding:10px 14px;text-align:left;color:#666;font-size=
+:11px;text-transform:uppercase;'>Change</th>
+        <th =
+style=3D'padding:10px 14px;text-align:left;color:#666;font-size:11px;text-t=
+ransform:uppercase;'>Rating</th>
+      </tr></thead>
+      <tbody><tr>
+    <td style=3D'padding:10px 14px;color:#fff;font-weight:700;border-bottom=
+:1px solid #1a1a35;'>AAPL</td>
+    <td style=3D'padding:10px =
+14px;color:#aaa;border-bottom:1px solid #1a1a35;'>Apple</td>
+    <td style=3D'padding:10px 14px;color:#fff;font-family:monospace;border-=
+bottom:1px solid #1a1a35;'>$180.96</td>
+    <td style=3D'padding:10px =
+14px;color:#fff;font-family:monospace;border-bottom:1px solid =
+#1a1a35;'>$183.21</td>
+    <td style=3D'padding:10px =
+14px;color:#00c853;font-weight:700;border-bottom:1px solid =
+#1a1a35;'>&#9650; +1.78%</td>
+    <td style=3D'padding:10px =
+14px;border-bottom:1px solid #1a1a35;'><span style=3D'background:#00c85322;=
+border:1px solid #00c853;color:#00c853;padding:2px 8px;border-radius:100px;=
+font-size:11px;font-weight:700;'>Buy</span></td>
+  </tr><tr>
+    <td style=3D'padding:10px 14px;color:#fff;font-weight:700;border-bottom=
+:1px solid #1a1a35;'>META</td>
+    <td style=3D'padding:10px =
+14px;color:#aaa;border-bottom:1px solid #1a1a35;'>Meta (Facebook)</td>
+    <td style=3D'padding:10px 14px;color:#fff;font-family:monospace;border-=
+bottom:1px solid #1a1a35;'>$450.68</td>
+    <td style=3D'padding:10px =
+14px;color:#fff;font-family:monospace;border-bottom:1px solid =
+#1a1a35;'>$452.27</td>
+    <td style=3D'padding:10px =
+14px;color:#00c853;font-weight:700;border-bottom:1px solid =
+#1a1a35;'>&#9650; +0.51%</td>
+    <td style=3D'padding:10px =
+14px;border-bottom:1px solid #1a1a35;'><span style=3D'background:#ff880022;=
+border:1px solid #ff8800;color:#ff8800;padding:2px 8px;border-radius:100px;=
+font-size:11px;font-weight:700;'>Hold</span></td>
+  </tr><tr>
+    <td style=3D'padding:10px 14px;color:#fff;font-weight:700;border-bottom=
+:1px solid #1a1a35;'>GOOGL</td>
+    <td style=3D'padding:10px =
+14px;color:#aaa;border-bottom:1px solid #1a1a35;'>Google (Alphabet)</td>
+    <td style=3D'padding:10px 14px;color:#fff;font-family:monospace;border-=
+bottom:1px solid #1a1a35;'>$139.12</td>
+    <td style=3D'padding:10px =
+14px;color:#fff;font-family:monospace;border-bottom:1px solid =
+#1a1a35;'>$137.07</td>
+    <td style=3D'padding:10px =
+14px;color:#f44336;font-weight:700;border-bottom:1px solid =
+#1a1a35;'>&#9660; -2.09%</td>
+    <td style=3D'padding:10px =
+14px;border-bottom:1px solid #1a1a35;'><span style=3D'background:#ff880022;=
+border:1px solid #ff8800;color:#ff8800;padding:2px 8px;border-radius:100px;=
+font-size:11px;font-weight:700;'>Hold</span></td>
+  </tr><tr>
+    <td style=3D'padding:10px 14px;color:#fff;font-weight:700;border-bottom=
+:1px solid #1a1a35;'>MSFT</td>
+    <td style=3D'padding:10px =
+14px;color:#aaa;border-bottom:1px solid #1a1a35;'>Microsoft</td>
+    <td style=3D'padding:10px 14px;color:#fff;font-family:monospace;border-=
+bottom:1px solid #1a1a35;'>$411.9</td>
+    <td style=3D'padding:10px =
+14px;color:#fff;font-family:monospace;border-bottom:1px solid =
+#1a1a35;'>$416.32</td>
+    <td style=3D'padding:10px =
+14px;color:#00c853;font-weight:700;border-bottom:1px solid =
+#1a1a35;'>&#9650; +1.54%</td>
+    <td style=3D'padding:10px =
+14px;border-bottom:1px solid #1a1a35;'><span style=3D'background:#00c85322;=
+border:1px solid #00c853;color:#00c853;padding:2px 8px;border-radius:100px;=
+font-size:11px;font-weight:700;'>Buy</span></td>
+  </tr><tr>
+    <td style=3D'padding:10px 14px;color:#fff;font-weight:700;border-bottom=
+:1px solid #1a1a35;'>TSLA</td>
+    <td style=3D'padding:10px =
+14px;color:#aaa;border-bottom:1px solid #1a1a35;'>Tesla</td>
+    <td style=3D'padding:10px 14px;color:#fff;font-family:monospace;border-=
+bottom:1px solid #1a1a35;'>$250.93</td>
+    <td style=3D'padding:10px =
+14px;color:#fff;font-family:monospace;border-bottom:1px solid =
+#1a1a35;'>$253.11</td>
+    <td style=3D'padding:10px =
+14px;color:#00c853;font-weight:700;border-bottom:1px solid =
+#1a1a35;'>&#9650; +1.24%</td>
+    <td style=3D'padding:10px =
+14px;border-bottom:1px solid #1a1a35;'><span style=3D'background:#00c85322;=
+border:1px solid #00c853;color:#00c853;padding:2px 8px;border-radius:100px;=
+font-size:11px;font-weight:700;'>Buy</span></td>
+  </tr><tr>
+    <td style=3D'padding:10px 14px;color:#fff;font-weight:700;border-bottom=
+:1px solid #1a1a35;'>NVDA</td>
+    <td style=3D'padding:10px =
+14px;color:#aaa;border-bottom:1px solid #1a1a35;'>NVIDIA</td>
+    <td style=3D'padding:10px 14px;color:#fff;font-family:monospace;border-=
+bottom:1px solid #1a1a35;'>$877.57</td>
+    <td style=3D'padding:10px =
+14px;color:#fff;font-family:monospace;border-bottom:1px solid =
+#1a1a35;'>$871.89</td>
+    <td style=3D'padding:10px =
+14px;color:#f44336;font-weight:700;border-bottom:1px solid =
+#1a1a35;'>&#9660; -0.92%</td>
+    <td style=3D'padding:10px =
+14px;border-bottom:1px solid #1a1a35;'><span style=3D'background:#ff880022;=
+border:1px solid #ff8800;color:#ff8800;padding:2px 8px;border-radius:100px;=
+font-size:11px;font-weight:700;'>Hold</span></td>
+  </tr><tr>
+    <td style=3D'padding:10px 14px;color:#fff;font-weight:700;border-bottom=
+:1px solid #1a1a35;'>AMZN</td>
+    <td style=3D'padding:10px =
+14px;color:#aaa;border-bottom:1px solid #1a1a35;'>Amazon</td>
+    <td style=3D'padding:10px 14px;color:#fff;font-family:monospace;border-=
+bottom:1px solid #1a1a35;'>$175.58</td>
+    <td style=3D'padding:10px =
+14px;color:#fff;font-family:monospace;border-bottom:1px solid =
+#1a1a35;'>$176.94</td>
+    <td style=3D'padding:10px =
+14px;color:#00c853;font-weight:700;border-bottom:1px solid =
+#1a1a35;'>&#9650; +1.11%</td>
+    <td style=3D'padding:10px =
+14px;border-bottom:1px solid #1a1a35;'><span style=3D'background:#00c85322;=
+border:1px solid #00c853;color:#00c853;padding:2px 8px;border-radius:100px;=
+font-size:11px;font-weight:700;'>Buy</span></td>
+  </tr></tbody>
+    </table>
+    <h2 style=3D'color:#fff;font-size:16px;margin:0 0 =
+12px;border-bottom:1px solid #1a1a35;padding-bottom:8px;'>&#129302; AI =
+Analysis</h2>
+    <div style=3D'background:#111126;border-radius:8px;paddin=
+g:18px 20px;margin-bottom:24px;'>
+      <p style=3D'color:#aaa;font-size:13=
+px;margin:0 0 12px;line-height:1.7;'><strong style=3D'color:#00d4ff;'>Top =
+Mover:</strong> Apple (AAPL) with a +1.78% change, as investors react =
+positively to its upcoming product launches and strong Q2 earnings =
+expectations.</p>
+      <p style=3D'color:#aaa;font-size:13px;margin:0 0 =
+12px;line-height:1.7;'><strong style=3D'color:#00d4ff;'>News =
+Impact:</strong> SpaceX's IPO success is a major talking point, with =
+investors optimistic about the company's long-term prospects. Meta's AI =
+project under Alexandr Wang is in the spotlight, potentially impacting its =
+stock performance. The Musk-Page relationship and their companies' =
+proximity are intriguing, but the impact on stock prices is less direct.=
+</p>
+      <p style=3D'color:#aaa;font-size:13px;margin:0 0 =
+12px;line-height:1.7;'><strong style=3D'color:#f44336;'>Risk:</strong> A =
+potential risk to monitor is the ongoing AI debate in India, which could =
+impact tech companies with AI-focused initiatives, including Anthropic.</p>
+      <p style=3D'color:#aaa;font-size:13px;margin:0 0 12px;line-height:1.=
+7;'><strong style=3D'color:#00c853;'>Opportunity:</strong> SpaceX's IPO =
+provides an exciting opportunity for investors to capitalize on the space =
+exploration and satellite communication sectors.</p>
+      <p style=3D'color:#aaa;font-size:13px;margin:0 0 12px;line-height:1.=
+7;'><strong style=3D'color:#bc8cff;'>Anthropic Pulse:</strong> Neutral to =
+Positive. Anthropic's recent decision to suspend access to new models has =
+sparked a debate in India, but the overall sentiment is that this is a =
+temporary setback and the company's long-term prospects remain promising.=
+</p>
+      <p style=3D'color:#aaa;font-size:13px;margin:0;line-height:1.=
+7;'><strong style=3D'color:#ff8800;'>Tomorrow:</strong> The market is =
+expected to continue its bullish trend, with potential for further gains in=
+ tech stocks. Apple's momentum may continue, and Microsoft could see =
+increased interest following its recent acquisition news.</p>
+    </div>
+    <h2 style=3D'color:#fff;font-size:16px;margin:0 0 =
+12px;border-bottom:1px solid #1a1a35;padding-bottom:8px;'>&#128240; Latest =
+News</h2>
+    <div style=3D'background:#1a1a2e;border-left:3px solid =
+#00d4ff;padding:10px 14px;margin:6px 0;border-radius:0 6px 6px 0;'>
+    <a href=3D'https://www.cnbc.com/2026/06/14/top-analysts-are-confident-a=
+bout-the-prospects-of-these-3-stocks.html' style=3D'color:#fff;text-decorat=
+ion:none;font-size:13px;font-weight:600;'>Top Wall Street analysts are =
+confident about the growth prospects of these 3 stocks</a>
+    <div style=3D'color:#555;font-size:11px;margin-top:3px;'>CNBC</div>
+  </div><div style=3D'background:#1a1a2e;border-left:3px solid =
+#00d4ff;padding:10px 14px;margin:6px 0;border-radius:0 6px 6px 0;'>
+    <a href=3D'https://www.cnbc.com/2026/06/14/meta-hired-alexandr-wang-to-=
+build-ai-its-zuckerbergs-job-to-sell-it.html' style=3D'color:#fff;text-deco=
+ration:none;font-size:13px;font-weight:600;'>A year after Meta tapped =
+Alexandr Wang to build a new AI model, Zuckerberg has to sell it</a>
+    <div style=3D'color:#555;font-size:11px;margin-top:3px;'>CNBC</div>
+  </div><div style=3D'background:#1a1a2e;border-left:3px solid =
+#00d4ff;padding:10px 14px;margin:6px 0;border-radius:0 6px 6px 0;'>
+    <a href=3D'https://www.cnbc.com/2026/06/14/elon-musk-drifted-from-larry=
+-page-but-spacex-google-closer-than-ever.html' style=3D'color:#fff;text-dec=
+oration:none;font-size:13px;font-weight:600;'>Elon Musk drifted from Larry =
+Page over a decade ago, but their companies are closer than ever</a>
+    <div style=3D'color:#555;font-size:11px;margin-top:3px;'>CNBC</div>
+  </div><div style=3D'background:#1a1a2e;border-left:3px solid =
+#00d4ff;padding:10px 14px;margin:6px 0;border-radius:0 6px 6px 0;'>
+    <a href=3D'https://techcrunch.com/2026/06/13/as-anthropic-suspends-acce=
+ss-to-new-models-india-debates-its-ai-future/' style=3D'color:#fff;text-dec=
+oration:none;font-size:13px;font-weight:600;'>As Anthropic suspends access =
+to new models, India debates its AI future | TechCrunch</a>
+    <div style=3D'color:#555;font-size:11px;margin-top:3px;'>TechCrunch</di=
+v>
+  </div><div style=3D'background:#1a1a2e;border-left:3px solid =
+#00d4ff;padding:10px 14px;margin:6px 0;border-radius:0 6px 6px 0;'>
+    <a href=3D'https://www.cnbc.com/2026/06/13/spacex-ipo-sticks-the-landin=
+g-heres-what-investors-are-saying-about-its-epic-first-trading-day.html' =
+style=3D'color:#fff;text-decoration:none;font-size:13px;font-weight:600;'>S=
+paceX IPO sticks the landing. Here's what investors are saying about its =
+epic first trading day</a>
+    <div style=3D'color:#555;font-size:11px;marg=
+in-top:3px;'>CNBC</div>
+  </div>
+  </div>
+  <div style=3D'background:#05051=
+0;padding:14px 32px;text-align:center;font-size:11px;color:#444;border-radi=
+us:0 0 12px 12px;'>Generated by AI Stock Monitor &middot; Yahoo Finance + =
+Cohere AI + n8n &middot; Not financial advice &middot; 2026-06-15T15:46:01.=
+303Z</div>
+</div>
+					<br>
+					<br>
+					---
+					<br>
+					<em>This email was sent automatically with <a href=3D"https://n8n.io/?=
+utm_source=3Dn8n-internal&utm_medium=3Dpowered_by&utm_campaign=3Dn8n-nodes-=
+base.emailSend_855f15e720c0a826680b2b0f475302111189c22ad3e5b9471489d6dd10ed=
+98e0" target=3D"_blank">n8n</a></em>
+				=09
